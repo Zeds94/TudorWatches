@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Patrones Responsive Web Design</title>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="css/style2.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div>
+    <a href="index.html"> <img class="bannerLV" src="images/zed/BannerHermes.png"/> </a>
+    <!---->
+
+  </div> 
+  <div class="contenedor two-columns">
+    <main class="principal-content">
+      <article>
+        
+
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+        <model-viewer id="color1" camera-controls touch-action="pan-y" src="/TudorWatch.glb" ar alt="A 3D model of an astronaut">
+          <div class="controls" id="color-controls1">
+            <button data-color="#800020">Burgundy</button>
+            <button data-color="#ffe4c4">Light</button>
+            <button data-color="#984c4c">Brown</button>
+          </div>
+        </model-viewer>
+        <script>
+          const modelViewerColor2 = document.querySelector("model-viewer#color1");
+
+          document.querySelector('#color-controls1').addEventListener('click', (event) => {
+            const colorString = event.target.dataset.color;
+            const [material] = modelViewerColor2.model.materials;
+            material.pbrMetallicRoughness.setBaseColorFactor(colorString);
+          });
+        </script>
+
+    
+
+
+
+
+
+      </article>
+    </main>
+
+
+
+      <article class="Sidebar-2">
+         
+          <!--<img class="RightPanel" src="images/zed/RightPanel.png">-->
+          <a href="https://facetime.apple.com/join#v=1&p=vLt8OxFkEe+L7CIhxMsj8w&k=qZggLTDot-cb4O61H5uPNsNH9i_FWDGtyKWILvDuZF4"> <img class="RightPanel" src="images/zed/SofaHermes.png"> </a>
+          <a href="https://facetime.apple.com/join#v=1&p=vLt8OxFkEe+L7CIhxMsj8w&k=qZggLTDot-cb4O61H5uPNsNH9i_FWDGtyKWILvDuZF4"> <img class="iconadvisor" src="images/zed/Advisor.png"> </a>
+
+
+      
+    </article>
+  </div>
+</body>
+
+</html>
